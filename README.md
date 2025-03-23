@@ -25,5 +25,5 @@ A Dual N-Back application is a type of brain-training program designed to improv
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Sapta666/Speed-Typing-Test-App.git
+   git clone https://github.com/Sapta666/Dual-N-Back.git
    cd Speed-Typing-Test-App
