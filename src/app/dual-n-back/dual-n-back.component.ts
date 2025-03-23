@@ -32,7 +32,7 @@ export class DualNBackComponent implements OnInit {
     public gridScore: number = 0;
     private _isGridPressed: boolean = false;
 
-    private _interval: NodeJS.Timer;//to store the thread object id
+    private _interval: any//to store the thread object id
 
     // game settings options
     public n_back_Setting: number = 1;

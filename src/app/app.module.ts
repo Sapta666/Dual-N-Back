@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { DualNBackComponent } from './dual-n-back/dual-n-back.component';
 import { NBackSettingsPopupComponent } from './dual-n-back/settings-popup/n-back-settings-popup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
 
     FormsModule,
-    ReactiveFormsModule,    
+    ReactiveFormsModule,
+    ButtonsModule,
+    BrowserAnimationsModule,
+    DialogsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
