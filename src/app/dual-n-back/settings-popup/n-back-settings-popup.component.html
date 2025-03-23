@@ -1,0 +1,75 @@
+<kendo-dialog
+    title="Edit Dual N Back Settings"
+    [themeColor]="'primary'"
+    (close)="onCloseClick()"
+    [width]="800"
+    >
+    
+    <form [formGroup]="formGroup">
+
+        <div class="row">
+            <div class="col-4 text-end fw-bold pt-2">
+                N-Back
+            </div>
+            <div class="col-8">
+                <input 
+                    kendoTextBox
+                    formControlName="N_Back"
+                    type="number"
+                    min="1"
+                    step="1"
+                    required
+                >        
+                <div class="text-danger" *ngIf="!formGroup.get('N_Back')?.valid">
+                    Minimum value is 1.
+                </div>                            
+            </div>
+            
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-4 text-end fw-bold pt-2">
+                Speed Per Iteration(milli-seconds)
+            </div>
+            <div class="col-8 d-flex flex-column justify-content-center">
+                <input 
+                    kendoTextBox
+                    formControlName="Speed_MS"
+                    type="number"
+                    min="800"
+                    required
+                >
+                <div class="text-danger" *ngIf="!formGroup.get('Speed_MS')?.valid">
+                    Minimum value is 800.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-4 text-end fw-bold pt-2">
+                Number of Turns
+            </div>
+            <div class="col-8">
+                <input 
+                    kendoTextBox
+                    formControlName="IterationNum"
+                    type="number"
+                    min="10"
+                    required
+                >
+                <div class="text-danger" *ngIf="!formGroup.get('IterationNum')?.valid">
+                    Minimum value is 10.
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <kendo-dialog-actions>
+        <button kendoButton (click)="onCloseClick()" class="bg-danger text-white fs-5">No</button>
+        <button kendoButton (click)="onSubmitClick()" class="bg-success text-white fs-5">
+            Yes
+        </button>
+    </kendo-dialog-actions>
+</kendo-dialog>
